@@ -6,7 +6,7 @@ ProTeC
 │   README.md          
 │   requirements.yaml   : dependency file
 │
-└─── classifier
+└─── classifiers
 │   │   {vectorization}_{model}_classifier_{method}.py  : model variations
 │   │
 │   └───util
