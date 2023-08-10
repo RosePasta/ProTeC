@@ -47,8 +47,8 @@ ProTeC
 ## Reproduction step
 1. Set up Glove Model
    1. Download and unpack from `https://nlp.stanford.edu/data/glove.6B.zip`
-   2. Modify the **W2V_PATH** in 57 line of `./classifier/util/old_util.py`
-2. Set up the dataset path **BASE_PATH** in 67 line of `./classifier/util/old_util.py` (Already set, so can be omitted.)
+   2. Modify the **W2V_PATH** in 57 line of `./classifiers/util/old_util.py`
+2. Set up the dataset path **BASE_PATH** in 67 line of `./classifiers/util/old_util.py` (Already set, so can be omitted.)
 3. Install the conda Python ENV by installing the dependencies with requirements.yaml
 ```
 conda env create -f requirements.yaml
@@ -58,7 +58,7 @@ conda env create -f requirements.yaml
   - If the model is "dl", change the variables "training_set", and "which_field"
 5. Execute the Python file, for example, to run the tfidf+dl+baseline variation:
 ```
-python ./classifier/tfidf_dl_classifier_baseline.py
+python ./classifiers/tfidf_dl_classifier_baseline.py
 ```
 
 
