@@ -64,5 +64,5 @@ def get_cnn_parameters():
     return w2v_dim, w2v_path, drop_out, l2_reg_lambda, filter_sizes, num_filters, batch, lr
 
 def get_dataset_path():        
-    base_path ="../traininig_dataset/"
+    base_path ="../dataset/traininig_dataset/"
     return base_path
