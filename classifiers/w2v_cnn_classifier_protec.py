@@ -190,7 +190,7 @@ for dataset in datasets:
             callbacks = [EarlyStopping(monitor='val_loss',patience=patience),
                         ModelCheckpoint(filepath="./model/dump_"+executed_file_name, monitor='val_loss',save_best_only=True)]
             model.fit(X_bug_train, y_bug_train,  epochs=epoch, batch_size=batch, verbose = verbose, callbacks=callbacks, validation_data=(XValidation, YValidation))    
-            test_loss, test_acc = model.evaluate(X_bug_train,  y_bug_train, verbose=0)
+            #test_loss, test_acc = model.evaluate(X_bug_train,  y_bug_train, verbose=0)
             trained_model = keras.models.load_model("./model/dump_"+executed_file_name)
 
 
