@@ -119,8 +119,8 @@ verbose = 1
 max_length_base, epoch, batch, patience, val_rate, lr = own_util.get_dl_parameters()
 max_length_threshold = max_length_base
 
-base_path = "D:\\ProTeC\\dataset\\traininig_dataset\\"
-base_path ="D:\\ExpData\\ProTeC_SplittedData\\"
+
+base_path = own_util.get_dataset_path()
 
 executed_file_name = sys.argv[0].split("/")[-1].replace(".py","")
 
