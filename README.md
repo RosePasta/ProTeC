@@ -43,21 +43,24 @@ ProTeC
 * rq{1|2|3|4|5}.py
     - Scripts to print experimental results for answering each research question
 
-
 ## Reproduction step
 1. Set up Glove Model
    1. Download and unpack from `https://nlp.stanford.edu/data/glove.6B.zip`
    2. Modify the **W2V_PATH** in 57 line of `./classifiers/util/old_util.py`
 2. Set up the dataset path **BASE_PATH** in 67 line of `./classifiers/util/old_util.py` (Already set, so can be omitted.)
 3. Install the conda Python ENV by installing the dependencies with requirements.yaml
+   - In this task, please set up PyTorch according to your CUDA version on your computer.
+   - Our environment: CUDA 12.2, pytorch 1.8.0, transformers 4.19.4
+
 ```
 conda env create -f requirements.yaml
 ```
 4. Change the model architecture, textual features, and training/tuning dataset (refer to the comments in each variation file)
   - If the model is "ml", change the variables "model_name", "training_set", and "which_field"
   - If the model is "dl", change the variables "training_set", and "which_field"
-5. Execute the Python file, for example, to run the tfidf+dl+baseline variation:
+5. Execute the Python file in Window, for example, to run the tfidf+dl+baseline variation:
 ```
+cd classifiers
 python ./classifiers/tfidf_dl_classifier_baseline.py
 ```
 
